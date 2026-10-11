@@ -1,0 +1,122 @@
+* { box-sizing: border-box; }
+
+:root {
+  --couleur-principale: #0d6efd;
+  --couleur-fonce: #1b2a41;
+  --couleur-fond: #f8f9fa;
+  --espace: 1rem;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--couleur-fonce);
+  background-color: var(--couleur-fond);
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--couleur-principale);
+  outline-offset: 2px;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--espace);
+  padding: var(--espace) 2rem;
+  background-color: var(--couleur-principale);
+  color: white;
+}
+
+header h1 { margin: 0; font-size: 1.5rem; }
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a { color: white; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+
+#accueil {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem var(--espace);
+  background-color: var(--couleur-fonce);
+  color: white;
+}
+
+.bouton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--couleur-principale);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+.bouton:hover { background-color: #0b5ed7; }
+
+.projets { padding: 2rem var(--espace); }
+
+.grille-projets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.grille-projets article {
+  padding: var(--espace);
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+}
+
+.grille-projets img { max-width: 100%; height: auto; }
+
+.liste-competences {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.liste-competences li {
+  padding: 0.4rem 0.9rem;
+  background-color: var(--couleur-principale);
+  color: white;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+#form-contact { display: flex; flex-direction: column; gap: 0.75rem; max-width: 500px; }
+#form-contact label { font-weight: bold; }
+#form-contact input, #form-contact textarea {
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font: inherit;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--couleur-fonce);
+  color: white;
+}
+
+@media (min-width: 768px) {
+  #apropos { display: flex; align-items: center; gap: 2rem; }
+  #apropos img { max-width: 220px; border-radius: 50%; }
+}
